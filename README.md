@@ -50,7 +50,7 @@ Sample failure request payload:
 - When server returns ``Http 429 [Too many request]``, it's your obligation as an API to back off and not spam the API
 - **Repeatedly violating rate limits and/or failing to back off after receiving 429s will result in an automated API Key ban (``HTTP 418 [I'm a Teapot]``)**
 - API Key bans are tracked and **scale in duration** for repeat offenders, **from 3 minutes to 3 days**
-- A ``Retry-After`` header is sent with a 418 responses and will give the number of seconds required to wait.
+- A ``Retry-After`` header is sent with a 418 responses and will give the number of minutes required to wait.
 - **The limits on the API are based on the API-KEY, not the IP addresses**
 
 ## Endpoint security type
