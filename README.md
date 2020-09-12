@@ -14,7 +14,7 @@
 ## General API Information
 - Base endpoint is : ``https://api.sistemkoin.com/api/``
 - All endpoints return either a **JSON object** or **Array**
-- All time and  timestamp related fields are in **millisecond**
+- All returned time and timestamp related fields are in **millisecond**
 
 ## General Information Endpoints
 - All endpoints contain the **status** field. This will tell you the success of your request, whether ``success`` or ``failure``.
@@ -63,7 +63,7 @@ Sample failure request payload:
 - Endpoints use ``HMAC SHA256`` signatures. The ``HMAC SHA256`` signature is a keyed ``HMAC SHA256`` operation. Use your ``apiSecret`` as the key and totalParams as the value for the HMAC operation
 
 ## Timing Security
-- A ``SIGNED`` endpoint also requires a parameter, ``timestamp``, to be sent which should be the millisecond timestamp of when the request was created and sent.
+- A ``SIGNED`` endpoint also requires a parameter, ``timestamp``, to be sent which should be the second timestamp of when the request was created and sent.
 - An additional parameter, ``recvWindow``, may be sent to specify the number of milliseconds after ``timestamp`` the request is valid for. If ``recvWindow`` is not sent, **it defaults to 5000**
 
 ## Http Status Codes
